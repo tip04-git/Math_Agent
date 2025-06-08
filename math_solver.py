@@ -7,11 +7,18 @@ from qdrant_client import QdrantClient
 from dotenv import load_dotenv
 from tavily import TavilyClient
 import dspy
+import json
 from langgraph.graph import StateGraph
 from typing import TypedDict, Optional
 
 load_dotenv()
 
+with open("jeebench_math_results.json", "r", encoding="utf-8") as f:
+    jee_results_cache = json.load(f)
+
+jee_answer_lookup = {
+    q["question"].strip(): q for q in jee_results_cache
+}
 # --- Input/Output Guardrails ---
 
 def is_math_educational(text):
@@ -93,7 +100,6 @@ def kb_retrieval_node(data):
     if docs:
         data["retrieved_context"] = "\n".join([doc.page_content for doc in docs])
         data["from_kb"] = True
-        print("✅ Found in KB")
     else:
         data["from_kb"] = False
         print("❌ No KB data found.")
