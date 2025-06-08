@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the derivative of x^2?",
+    "answer": "To find the derivative of x^2:\nStep 1: Use the power rule.\nStep 2: The power rule says d/dx [x^n] = n * x^(n-1).\nStep 3: So, d/dx [x^2] = 2 * x^(2-1) = 2x."
+  },
+  {
+    "question": "What is the integral of 1/x?",
+    "answer": "To integrate 1/x:\nStep 1: Recall the standard integral ∫(1/x) dx = ln|x| + C.\nStep 2: So the answer is ln|x| + C."
+  },
+  {
+    "question": "What is the Pythagorean theorem?",
+    "answer": "The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides: a^2 + b^2 = c^2."
+  }
+]
