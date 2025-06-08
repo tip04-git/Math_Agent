@@ -1,7 +1,7 @@
 import os
 import re
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_qdrant import Qdrant
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import Qdrant
 import google.generativeai as genai
 from qdrant_client import QdrantClient
 from dotenv import load_dotenv
